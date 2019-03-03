@@ -8,4 +8,4 @@
                                                                         홀수만 더하기 /김승태/Solution.java
 5. 기본적으로 Java 또는 C++, Python을 바탕으로 진행하도록 한다.
 
-6. asdfasdf
+6. Test
