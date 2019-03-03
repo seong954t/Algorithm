@@ -7,5 +7,3 @@
 4. 폴더의 구조는 다음과 같다. Algorithm > 문제 이름 > 작성자 이름 > 제출한 코드 파일 ex) Algorithm/2072.
                                                                         홀수만 더하기 /김승태/Solution.java
 5. 기본적으로 Java 또는 C++, Python을 바탕으로 진행하도록 한다.
-
-6. asdfasdf
