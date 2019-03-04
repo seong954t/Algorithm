@@ -7,7 +7,7 @@ pick_list = []
 
 while len(pick_list) < pick_num:
     random_pick = random.choice(people_list)
-    if random_pick not in prev_list and random_pick not in pick_list:
+    if random_pick not in (prev_list + pick_list):
         pick_list.append(random_pick)
 
 print(pick_list)
