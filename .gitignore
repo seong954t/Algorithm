@@ -1,6 +1,13 @@
 # Prerequisites
 *.d
 
+
+# IntelliJ
+*.xml
+*.iml
+.idea/
+
+
 # Compiled Object files
 *.slo
 *.lo
