@@ -5,7 +5,7 @@
 # IntelliJ
 *.xml
 *.iml
-/.idea
+.idea/
 
 
 # Compiled Object files
