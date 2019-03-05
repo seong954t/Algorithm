@@ -1,6 +1,8 @@
 # Prerequisites
 *.d
 
+#Input Data
+*.txt
 
 # IntelliJ
 *.xml
