@@ -10,7 +10,6 @@ public class RandomPick {
         String[] beforeWinner = new String[]{
                 "김다은", "김승태", "김수연", "김진혁", "최소영"
         };
-
         int newWinner = 2;
 
         HashSet<String> peopleSet = makePeopleSet(studyPeople, beforeWinner);
