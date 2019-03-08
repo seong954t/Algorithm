@@ -1,6 +1,15 @@
 # Prerequisites
 *.d
 
+#Input Data
+*.txt
+
+# IntelliJ
+*.xml
+*.iml
+.idea/
+
+
 # Compiled Object files
 *.slo
 *.lo
