@@ -22,7 +22,8 @@ public class Solution {
 
             // 처음 위치에 올 나사 찾기
             for(int i =0; i < metalNum; i++){
-                int x =  lodlist.get(i).x;
+                int x = lodlist.get(i).x;
+
                 int j = 0;
                 for(j = 0; j < metalNum; j++){
                     if(x == lodlist.get(j).y){
