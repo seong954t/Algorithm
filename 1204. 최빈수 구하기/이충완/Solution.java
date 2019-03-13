@@ -1,5 +1,3 @@
-package 최빈수_구하기;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
