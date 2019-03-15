@@ -1,5 +1,3 @@
-package view;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -21,8 +19,42 @@ public class Solution {
 			while (parser.hasMoreElements()) {
 				buildings[idx++] = Integer.parseInt(parser.nextToken());
 			}
-			System.out.println("completed input data");
+
+			int result = 0;
+			for (int i = 2; i < buildings.length - 2; i++) {
+				int viewFloor = 256;
+				boolean isOk = true;
+				for (int left = i - 1; left > i - 3; left--) {
+					if (buildings[left] >= buildings[i]) {
+						isOk = false;
+						break;
+					} else {
+						int gap = buildings[i] - buildings[left];
+						if (gap < viewFloor)
+							viewFloor = gap;
+					}
+				}
+				if (isOk) {
+					for (int right = i + 1; right < i + 3; right++) {
+						if (buildings[right] >= buildings[i]) {
+							isOk = false;
+							break;
+						} else {
+							int gap = buildings[i] - buildings[right];
+							if (gap < viewFloor)
+								viewFloor = gap;
+						}
+					}
+				}
+
+				if (isOk && viewFloor != 256) {
+					result += viewFloor;
+				}
+			}
+			bw.write("#" + tc + " " + result + "\n");
 		}
+		bw.flush();
+		bw.close();
 	}
 
 }
