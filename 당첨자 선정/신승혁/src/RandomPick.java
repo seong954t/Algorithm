@@ -13,41 +13,39 @@ import java.util.Random;
 
 public class RandomPick {
     public static void main(String[] args) {
-        String[] members = {"신승혁", "김기환", "김다은", "김미지", "김수연",
-                "김승태", "김진혁", "이충완", "장은정", "정진휘", "최소영", "현도훈"};
-        List list_member = new ArrayList(Arrays.asList(members));
-        int member_size = members.length; // 12
+        String[] members = {"신승혁", "김기환", "김다은", "김승태", "김진혁"};
+        List listMember = new ArrayList(Arrays.asList(members));
+        int memberSize = members.length; // 5
 
-        String[] picked_member = {"김승태", "김다은", "김진혁", "신승혁", "최소영"}; // 2주차
-
-        int pick_size = 5;
-        String[] next_member = new String[pick_size]; // 다음주 5명
+        String[] pickedMember = {"김다은", "신승혁"}; // 이전에 뽑은 사람
 
         // 이미 했던 사람 제외시키기
-        for (int i = 0; i < pick_size; i++) {
-            list_member.remove(picked_member[i]);
+        for (int i = 0; i < pickedMember.length; i++) {
+            listMember.remove(pickedMember[i]);
         }
-        int rest_member = list_member.size();// 제외한 나머지 7명
+        int restMember = listMember.size();// 제외한 나머지: 3명
 
-        // 나머지 중에서 랜덤으로 5명 뽑기
+
+        int pickSize = 1; // 몇명 뽑을 건지
+        // 나머지 중에서 랜덤으로 1명 뽑기
         Random random = new Random();
-        ArrayList<Integer> next_number = new ArrayList<Integer>();       // 중복된 숫자 거르기 위해
+        ArrayList<Integer> nextNumber = new ArrayList<>();       // 중복된 숫자 거르기 위해
 
         while (true) {
-            int random_number = random.nextInt(rest_member);
-            if (next_number.size() == pick_size) {
+            int randomNumber = random.nextInt(restMember);
+            if (nextNumber.size() == pickSize) {
                 break;
             }
-            if (!next_number.contains(random_number)) {
-                next_number.add(random_number);
+            if (!nextNumber.contains(randomNumber)) {
+                nextNumber.add(randomNumber);
             }
         }
 
         // 당첨자 출력
         System.out.println("당첨자 명단");
         System.out.println("---------");
-        for (int i =0 ; i<pick_size;i++){
-            System.out.println("  "+list_member.get(next_number.get(i)));
+        for (int i = 0; i < pickSize; i++) {
+            System.out.println("  " + listMember.get(nextNumber.get(i)));
         }
 
     }
