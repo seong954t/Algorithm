@@ -25,6 +25,9 @@ public class Solution {
 //            List<Character> alphabetList = new ArrayList(Arrays.asList(alphabetArray));
 
             for (int i = 0; i < alphabetList.size(); i++) {
+                if (i == alphabetList.size() - 1 && alphabetList.contains(intToChar(i))) {
+                    solution = i+1;
+                }
                 if (!alphabetList.contains(intToChar(i))) {
                     solution = i;
                     break;
