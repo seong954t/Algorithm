@@ -37,7 +37,7 @@ public class Solution {
 				checkJ = j;
 				if (map[0][j] == 1) {
 					isUpdate = false;
-					go(1, j, 1, "≥≤");
+					go(1, j, 1, "ÎÇ®");
 					if (isUpdate) {
 						result = j;
 					}
@@ -63,12 +63,12 @@ public class Solution {
 			return;
 		}
 
-		if (y - 1 >= 0 && map[x][y - 1] == 1 && !direction.equals("µø")) {
-			go(x, y - 1, ++count, "º≠");
-		} else if (y + 1 < 100 && map[x][y + 1] == 1 && !direction.equals("º≠")) {
-			go(x, y + 1, ++count, "µø");
+		if (y - 1 >= 0 && map[x][y - 1] == 1 && !direction.equals("Îèô")) {
+			go(x, y - 1, ++count, "ÏÑú");
+		} else if (y + 1 < 100 && map[x][y + 1] == 1 && !direction.equals("ÏÑú")) {
+			go(x, y + 1, ++count, "");
 		} else {
-			go(x + 1, y, ++count, "≥≤");
+			go(x + 1, y, ++count, "ÎÇ®");
 		}
 	}
 
