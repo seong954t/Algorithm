@@ -16,9 +16,7 @@ public class Solution {
 
             while (left < N) {
                 maxIndex = getMaxIndex(left, N, intArray);
-                if (maxIndex == 0) break;
                 result += calculate(left, maxIndex, intArray[maxIndex], intArray);
-
                 left = maxIndex+1;
             }
 
