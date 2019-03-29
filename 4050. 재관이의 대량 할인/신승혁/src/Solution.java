@@ -23,7 +23,7 @@ public class Solution {
 
             int solution = 0;
             // 3개로 끊었을 때 맨뒤꺼 안넣음
-            // 맨앞에꺼 넣는경우는 3개로 끊었을때 3개가 아닌경우
+            // 3개로 끊었을 때 3개가 아닌경우는 다 넣어줌
             for (int i = 0; i < costList.size(); i++) {
                 if (i % 3 != 2) {
                     solution += costList.get(i);
