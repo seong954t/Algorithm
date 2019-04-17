@@ -1,4 +1,3 @@
-package 김진혁;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
