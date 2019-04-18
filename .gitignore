@@ -9,6 +9,8 @@
 *.iml
 .idea/
 
+# Eclipse
+.metadata/
 
 # Compiled Object files
 *.slo
